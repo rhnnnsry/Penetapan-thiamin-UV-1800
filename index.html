@@ -241,7 +241,7 @@ footer p{max-width:100ch;margin:0 0 4px}
   <nav class="tabs" role="tablist" aria-label="Halaman">
     <button role="tab" data-view="alat" aria-selected="true">Alat dan simulasi</button>
     <button role="tab" data-view="prinsip" aria-selected="false">Prinsip dan metode</button>
-    <button role="tab" data-view="hitung" aria-selected="false">Perhitungan</button>
+    <button role="tab" data-view="hitung" aria-selected="false">Pengolahan Data</button>
     <button role="tab" data-view="referensi" aria-selected="false">Referensi</button>
   </nav>
 </header>
@@ -268,7 +268,7 @@ footer p{max-width:100ch;margin:0 0 4px}
         </dl>
       </div>
       <div class="views" role="toolbar" aria-label="Sudut pandang">
-        <button class="chip" data-cam="iso">Umum</button>
+        <button class="chip" data-cam="iso">Over View</button>
         <button class="chip" data-cam="front">Depan</button>
         <button class="chip" data-cam="top">Atas</button>
         <button class="chip" data-cam="mono">Monokromator</button>
@@ -358,11 +358,11 @@ footer p{max-width:100ch;margin:0 0 4px}
 <section id="view-prinsip" class="view" hidden>
   <div class="page">
     <h2>Prinsip dan metode</h2>
-    <p class="lead">Penetapan kadar tiamin pada tablet dapat dilakukan langsung dengan spektrofotometri UV, karena cincin pirimidin dan tiazol pada tiamin menyerap radiasi di sekitar 246 nm. Halaman ini merangkum dasar teori, cara kerja alat, dan alur analisisnya.</p>
+    <p class="lead">Penetapan kadar tiamin pada tablet dapat dilakukan langsung dengan spektrofotometri UV, karena cincin pirimidin dan tiazol pada tiamin menyerap radiasi di sekitar 235 - 250 nm (umumnya di 246 nm). Halaman ini merangkum dasar teori, cara kerja alat, dan alur analisisnya.</p>
 
     <div class="card">
       <h3>Prinsip spektrofotometri UV-Vis</h3>
-      <p>Molekul yang memiliki kromofor menyerap radiasi ultraviolet (sekitar 190 sampai 380 nm) atau cahaya tampak (380 sampai 780 nm). Energi foton yang diserap menaikkan elektron dari orbital berenergi rendah ke orbital berenergi lebih tinggi, misalnya transisi π→π* dan n→π*. Panjang gelombang serapan maksimum (λ<sub>maks</sub>) bersifat khas bagi suatu senyawa dalam pelarut tertentu.</p>
+      <p>Molekul yang memiliki gugus kromofor menyerap radiasi ultraviolet (sekitar 190 sampai 400 nm) atau cahaya tampak (400 sampai 800 nm) dengan sumber cahaya lampu deuterium dan halogen sebagai cahaya polikromatis yang kemudian melewati monokromator sebelum berkas dibagi dua dengan beam splitter. Berkas yang telah dibagi melewati dua kuvet (referensi dan sampel) lalu cahaya yang diteruskan (transmitan) diterima oleh detektor fotoidodida dan diubah menjadi energi listrik yang kemudian ditampilkan sebagai %T dan A pada monitor. Panjang gelombang serapan maksimum (λ<sub>maks</sub>) bersifat khas bagi suatu senyawa dalam pelarut tertentu.</p>
       <p>Banyaknya radiasi yang diserap oleh larutan dinyatakan oleh hukum Lambert-Beer:</p>
       <div class="formula"><var>A</var> = <var>ε</var> · <var>b</var> · <var>c</var> = log (<var>I</var><sub>0</sub> / <var>I</var>) = −log <var>T</var></div>
       <p><var>A</var> adalah absorbansi, <var>ε</var> absorptivitas molar (L·mol<sup>−1</sup>·cm<sup>−1</sup>), <var>b</var> tebal larutan atau lebar kuvet (cm), <var>c</var> konsentrasi, <var>I</var><sub>0</sub> intensitas radiasi yang masuk, <var>I</var> intensitas yang keluar, dan <var>T</var> transmitans. Hubungan <var>A</var> terhadap <var>c</var> linear selama radiasi monokromatik, larutan cukup encer, dan zat tidak berasosiasi atau bereaksi di dalam larutan. Untuk ketelitian yang baik, absorbansi dijaga pada rentang sekitar 0,2 sampai 0,8.</p>
@@ -408,32 +408,32 @@ footer p{max-width:100ch;margin:0 0 4px}
         </g>
       </svg>
       <ol>
-        <li>Lampu deuterium melayani daerah UV, lampu halogen (tungsten) melayani daerah tampak. Titik pergantian lampu dapat diatur pada sekitar 300 sampai 360 nm.</li>
-        <li>Cahaya polikromatik masuk melalui celah masuk, dijadikan sejajar oleh cermin kolimator, lalu didispersikan oleh kisi difraksi. Kisi diputar motor untuk memilih panjang gelombang.</li>
+        <li>Lampu deuterium melayani daerah UV, lampu halogen (tungsten) melayani daerah tampak.</li>
+        <li>Cahaya polikromatik masuk melalui celah masuk, lalu didispersikan oleh kisi difraksi monokromator agar menjadi panjang gelombang tertentu. Kisi diputar motor untuk memilih panjang gelombang.</li>
         <li>Cermin kedua memfokuskan berkas pada celah keluar sehingga hanya pita sempit (sekitar 1 nm) yang diteruskan.</li>
         <li>Berkas dibagi dua: satu melewati kuvet sampel, satu melewati kuvet referensi. Perbandingan keduanya mengoreksi fluktuasi lampu dan <em>drift</em>.</li>
         <li>Fotodioda silikon mengubah intensitas cahaya menjadi sinyal listrik. Elektronik menghitung <var>T</var> dan <var>A</var>, lalu mengirimnya ke PC.</li>
       </ol>
-      <p class="note">Pada alat nyata, mekanisme pembagi berkas dan tata letak optik dapat berbeda dari ilustrasi ini. Spesifikasi yang dipakai di sini bersumber dari halaman peralatan universitas dan lembar spesifikasi (lihat Referensi).</p>
+      <p class="note">Pada alat nyata, mekanisme pembagi berkas dan tata letak optik instrumen dapat berbeda dari ilustrasi ini. Spesifikasi yang dipakai di sini bersumber dari lembar spesifikasi (lihat Referensi).</p>
     </div>
 
     <div class="card">
       <h3>Tiamin dan alasan memilih 246 nm</h3>
-      <p>Tiamin (vitamin B<sub>1</sub>) dalam obat umumnya berupa tiamin hidroklorida (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS·HCl, BM 337,27) atau tiamin mononitrat. Gugus pirimidin dan tiazol bersifat kromofor sehingga larutan tiamin dalam media asam atau air menyerap kuat di sekitar 246 nm. Media asam encer (misalnya HCl 0,1 N) dipakai karena tiamin lebih stabil pada pH asam dan mudah terurai pada pH netral sampai basa.</p>
-      <div class="callout info">Metode langsung ini sederhana, tetapi tidak selektif jika sediaan mengandung zat lain yang menyerap pada 246 nm (misalnya vitamin B kompleks lain atau eksipien tertentu). Untuk matriks seperti itu, pustaka melaporkan metode derivatisasi, misalnya oksidasi menjadi tiokrom (pengukuran 369 nm) atau reaksi pembentukan warna dengan PDAB (425 nm), atau metode HPLC.</div>
+      <p>Tiamin (vitamin B<sub>1</sub>) dalam obat umumnya berupa tiamin hidroklorida (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS·HCl, BM 337,27) atau tiamin mononitrat. Cincin pirimidin dan tiazol bersifat kromofor sehingga larutan tiamin dalam suasana asam menyerap kuat di sekitar 235 - 250 nm. Media asam encer (misalnya HCl 1:60) dipakai karena tiamin lebih stabil pada pH asam dan mudah terurai pada pH netral sampai basa.</p>
+      <div class="callout info">Metode langsung ini sederhana, tetapi tidak selektif jika sediaan mengandung zat lain yang menyerap pada 235 - 250 nm (misalnya vitamin B kompleks lain atau eksipien tertentu). Untuk matriks seperti itu, pustaka melaporkan metode derivatisasi, misalnya oksidasi menjadi tiokrom (pengukuran 369 nm) atau reaksi pembentukan warna dengan PDAB (425 nm), atau metode HPLC.</div>
     </div>
 
     <div class="card">
       <h3>Alur penetapan kadar</h3>
       <ol>
-        <li><b>Larutan baku.</b> Timbang seksama sekitar 100 mg baku tiamin HCl, larutkan dengan HCl 0,1 N dalam labu 100 mL (1000 mg/L). Pipet 10 mL ke labu 100 mL (larutan antara 100 mg/L).</li>
-        <li><b>Deret standar.</b> Pipet 0; 0,5; 1,0; 1,5; 2,0; dan 2,5 mL larutan antara ke labu 10 mL, genapkan dengan pelarut. Diperoleh 0, 5, 10, 15, 20, dan 25 mg/L. Pelarut murni dipakai sebagai blanko.</li>
-        <li><b>Larutan sampel (C1).</b> Timbang 5 sampel dengan bobot berbeda, masing-masing sekitar 0,0100 g (10 mg) serbuk tablet, larutkan dalam 100 mL pelarut, sonikasi, saring. Konsentrasi larutan sekitar 16 mg/L, sudah berada di dalam rentang kurva sehingga tidak perlu diencerkan (faktor pengenceran 1). Jika perlu diencerkan, atur pipet dan labu pengenceran di halaman Perhitungan.</li>
+        <li><b>Larutan baku.</b> Timbang seksama sekitar 100 mg baku tiamin, larutkan dengan HCl 1:60 kedalam labu 100 mL (larutan baku 1000 mg/L). Pipet 10 mL ke labu 100 mL (larutan standar 100 mg/L).</li>
+        <li><b>Deret standar.</b> Pipet 0; 2,5; 5,0; 7,5; 10,0; dan 12,5 mL larutan standar 100 ppm ke labu 50 mL, kemudian ditera dengan HCl 1:60 dan dihomogenkan. Diperoleh 0, 5, 10, 15, 20, dan 25 mg/L. Pelarut murni dipakai sebagai blanko.</li>
+        <li><b>Larutan sampel (C1).</b> Timbang 5 sampel dengan bobot berbeda, masing-masing sekitar 0,0100 g (10 mg) serbuk tablet, larutkan kedalam 200 mL labu takar kemudian ditera dengan HCl 1:60 dan dihomogenkan. Jika perlu diencerkan, atur pipet dan labu pengenceran di halaman Perhitungan.</li>
         <li><b>Larutan spike (C2).</b> Ke dalam larutan sampel yang sama tambahkan baku tiamin sehingga konsentrasi naik 5 mg/L.</li>
         <li><b>Pengukuran.</b> Blanko untuk koreksi baseline, scan spektrum untuk memastikan λ<sub>maks</sub> (± 246 nm), lalu ukur standar, sampel C1, dan spike C2 pada λ<sub>maks</sub> dengan kuvet kuarsa 1 cm.</li>
         <li><b>Perhitungan.</b> Buat kurva kalibrasi, hitung konsentrasi (mg/L), kadar (mg/kg), kadar per tablet (mg/tablet), %RSD, dan % recovery.</li>
       </ol>
-      <p class="note">Volume, bobot, dan pelarut di atas adalah contoh untuk simulasi. Sesuaikan dengan monografi, SOP laboratorium, atau jurnal acuan yang Anda pakai.</p>
+      <p class="note">Volume, bobot, dan pelarut di atas adalah contoh untuk simulasi di Politeknik AKA Bogor. Sesuaikan dengan monografi, SOP laboratorium di masing-masing lembaga/kampus/perusahaan, atau jurnal acuan yang Anda pakai.</p>
     </div>
 
     <div class="card">
@@ -444,7 +444,7 @@ footer p{max-width:100ch;margin:0 0 4px}
           <p>Koefisien korelasi <var>r</var> dari regresi absorbansi terhadap konsentrasi. Batas deteksi dan kuantitasi diperkirakan dari simpangan baku residual (<var>S</var><sub>y/x</sub>) dan slope: LOD = 3,3·<var>S</var><sub>y/x</sub>/<var>b</var>, LOQ = 10·<var>S</var><sub>y/x</sub>/<var>b</var>.</p>
           <h4>Akurasi (% recovery)</h4>
           <p>Metode adisi standar: sejumlah baku ditambahkan ke sampel (spike C2) lalu dihitung berapa yang terukur kembali.</p>
-          <div class="formula">% recovery = (<var>C</var><sub>2</sub> − <var>C</var><sub>1</sub>) / <var>C</var><sub>tambah</sub> × 100</div>
+          <div class="formula">% recovery = (<var>C</var><sub>2</sub> − <var>C</var><sub>1</sub>) / <var>C</var><sub>3</sub> × 100</div>
           <p>Syarat keberterimaan pada proyek ini: 85 sampai 115%.</p>
         </div>
         <div>
