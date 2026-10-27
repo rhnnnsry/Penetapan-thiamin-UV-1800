@@ -241,7 +241,7 @@ footer p{max-width:100ch;margin:0 0 4px}
   <nav class="tabs" role="tablist" aria-label="Halaman">
     <button role="tab" data-view="alat" aria-selected="true">Alat dan simulasi</button>
     <button role="tab" data-view="prinsip" aria-selected="false">Prinsip dan metode</button>
-    <button role="tab" data-view="hitung" aria-selected="false">Perhitungan</button>
+    <button role="tab" data-view="hitung" aria-selected="false">Pengolahan Data</button>
     <button role="tab" data-view="referensi" aria-selected="false">Referensi</button>
   </nav>
 </header>
@@ -268,7 +268,7 @@ footer p{max-width:100ch;margin:0 0 4px}
         </dl>
       </div>
       <div class="views" role="toolbar" aria-label="Sudut pandang">
-        <button class="chip" data-cam="iso">Umum</button>
+        <button class="chip" data-cam="iso">Over View</button>
         <button class="chip" data-cam="front">Depan</button>
         <button class="chip" data-cam="top">Atas</button>
         <button class="chip" data-cam="mono">Monokromator</button>
@@ -408,32 +408,32 @@ footer p{max-width:100ch;margin:0 0 4px}
         </g>
       </svg>
       <ol>
-        <li>Lampu deuterium melayani daerah UV, lampu halogen (tungsten) melayani daerah tampak. Titik pergantian lampu dapat diatur pada sekitar 300 sampai 360 nm.</li>
-        <li>Cahaya polikromatik masuk melalui celah masuk, dijadikan sejajar oleh cermin kolimator, lalu didispersikan oleh kisi difraksi. Kisi diputar motor untuk memilih panjang gelombang.</li>
+        <li>Lampu deuterium melayani daerah UV, lampu halogen (tungsten) melayani daerah tampak.</li>
+        <li>Cahaya polikromatik masuk melalui celah masuk, lalu didispersikan oleh kisi difraksi monokromator agar menjadi panjang gelombang tertentu. Kisi diputar motor untuk memilih panjang gelombang.</li>
         <li>Cermin kedua memfokuskan berkas pada celah keluar sehingga hanya pita sempit (sekitar 1 nm) yang diteruskan.</li>
         <li>Berkas dibagi dua: satu melewati kuvet sampel, satu melewati kuvet referensi. Perbandingan keduanya mengoreksi fluktuasi lampu dan <em>drift</em>.</li>
         <li>Fotodioda silikon mengubah intensitas cahaya menjadi sinyal listrik. Elektronik menghitung <var>T</var> dan <var>A</var>, lalu mengirimnya ke PC.</li>
       </ol>
-      <p class="note">Pada alat nyata, mekanisme pembagi berkas dan tata letak optik dapat berbeda dari ilustrasi ini. Spesifikasi yang dipakai di sini bersumber dari halaman peralatan universitas dan lembar spesifikasi (lihat Referensi).</p>
+      <p class="note">Pada alat nyata, mekanisme pembagi berkas dan tata letak optik instrumen dapat berbeda dari ilustrasi ini. Spesifikasi yang dipakai di sini bersumber dari lembar spesifikasi (lihat Referensi).</p>
     </div>
 
     <div class="card">
       <h3>Tiamin dan alasan memilih 246 nm</h3>
-      <p>Tiamin (vitamin B<sub>1</sub>) dalam obat umumnya berupa tiamin hidroklorida (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS·HCl, BM 337,27) atau tiamin mononitrat. Gugus pirimidin dan tiazol bersifat kromofor sehingga larutan tiamin dalam media asam atau air menyerap kuat di sekitar 246 nm. Media asam encer (misalnya HCl 0,1 N) dipakai karena tiamin lebih stabil pada pH asam dan mudah terurai pada pH netral sampai basa.</p>
-      <div class="callout info">Metode langsung ini sederhana, tetapi tidak selektif jika sediaan mengandung zat lain yang menyerap pada 246 nm (misalnya vitamin B kompleks lain atau eksipien tertentu). Untuk matriks seperti itu, pustaka melaporkan metode derivatisasi, misalnya oksidasi menjadi tiokrom (pengukuran 369 nm) atau reaksi pembentukan warna dengan PDAB (425 nm), atau metode HPLC.</div>
+      <p>Tiamin (vitamin B<sub>1</sub>) dalam obat umumnya berupa tiamin hidroklorida (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS·HCl, BM 337,27) atau tiamin mononitrat. Cincin pirimidin dan tiazol bersifat kromofor sehingga larutan tiamin dalam suasana asam menyerap kuat di sekitar 235 - 250 nm. Media asam encer (misalnya HCl 1:60) dipakai karena tiamin lebih stabil pada pH asam dan mudah terurai pada pH netral sampai basa.</p>
+      <div class="callout info">Metode langsung ini sederhana, tetapi tidak selektif jika sediaan mengandung zat lain yang menyerap pada 235 - 250 nm (misalnya vitamin B kompleks lain atau eksipien tertentu). Untuk matriks seperti itu, pustaka melaporkan metode derivatisasi, misalnya oksidasi menjadi tiokrom (pengukuran 369 nm) atau reaksi pembentukan warna dengan PDAB (425 nm), atau metode HPLC.</div>
     </div>
 
     <div class="card">
       <h3>Alur penetapan kadar</h3>
       <ol>
-        <li><b>Larutan baku.</b> Timbang seksama sekitar 100 mg baku tiamin HCl, larutkan dengan HCl 0,1 N dalam labu 100 mL (1000 mg/L). Pipet 10 mL ke labu 100 mL (larutan antara 100 mg/L).</li>
-        <li><b>Deret standar.</b> Pipet 0; 0,5; 1,0; 1,5; 2,0; dan 2,5 mL larutan antara ke labu 10 mL, genapkan dengan pelarut. Diperoleh 0, 5, 10, 15, 20, dan 25 mg/L. Pelarut murni dipakai sebagai blanko.</li>
-        <li><b>Larutan sampel (C1).</b> Timbang 5 sampel dengan bobot berbeda, masing-masing sekitar 0,0100 g (10 mg) serbuk tablet, larutkan dalam 200 mL pelarut, saring. Konsentrasi larutan sekitar 16 mg/L, sudah berada di dalam rentang kurva.</li>
-        <li><b>Larutan spike (C3).</b> Ke dalam larutan satu sampel tambahkan larutan baku tiamin (misalnya 10 mL baku 100 mg/L), lalu ukur sebagai sampel + spike (C3). Jumlah spike (C2) dihitung dari konsentrasi dan volume baku yang ditambahkan.</li>
-        <li><b>Pengukuran.</b> Blanko untuk koreksi baseline, scan spektrum untuk memastikan λ<sub>maks</sub> (± 246 nm), lalu ukur standar, sampel C1, dan sampel + spike C3 pada λ<sub>maks</sub> dengan kuvet kuarsa 1 cm.</li>
+        <li><b>Larutan baku.</b> Timbang seksama sekitar 100 mg baku tiamin, larutkan dengan HCl 1:60 kedalam labu 100 mL (larutan baku 1000 mg/L). Pipet 10 mL ke labu 100 mL (larutan standar 100 mg/L).</li>
+        <li><b>Deret standar.</b> Pipet 0; 2,5; 5,0; 7,5; 10,0; dan 12,5 mL larutan standar 100 ppm ke labu 50 mL, kemudian ditera dengan HCl 1:60 dan dihomogenkan. Diperoleh 0, 5, 10, 15, 20, dan 25 mg/L. Pelarut murni dipakai sebagai blanko.</li>
+        <li><b>Larutan sampel (C1).</b> Timbang 5 sampel dengan bobot berbeda, masing-masing sekitar 0,0100 g (10 mg) serbuk tablet, larutkan kedalam 200 mL labu takar kemudian ditera dengan HCl 1:60 dan dihomogenkan. Jika perlu diencerkan, atur pipet dan labu pengenceran di halaman Perhitungan.</li>
+        <li><b>Larutan spike (C2).</b> Ke dalam larutan sampel yang sama tambahkan baku tiamin sehingga konsentrasi naik 5 mg/L.</li>
+        <li><b>Pengukuran.</b> Blanko untuk koreksi baseline, scan spektrum untuk memastikan λ<sub>maks</sub> (± 246 nm), lalu ukur standar, sampel C1, dan spike C2 pada λ<sub>maks</sub> dengan kuvet kuarsa 1 cm.</li>
         <li><b>Perhitungan.</b> Buat kurva kalibrasi, hitung konsentrasi (mg/L), kadar (mg/kg), kadar per tablet (mg/tablet), %RSD, dan % recovery.</li>
       </ol>
-      <p class="note">Volume, bobot, dan pelarut di atas adalah contoh untuk simulasi. Sesuaikan dengan monografi, SOP laboratorium, atau jurnal acuan yang Anda pakai.</p>
+      <p class="note">Volume, bobot, dan pelarut di atas adalah contoh untuk simulasi di Politeknik AKA Bogor. Sesuaikan dengan monografi, SOP laboratorium di masing-masing lembaga/kampus/perusahaan, atau jurnal acuan yang Anda pakai.</p>
     </div>
 
     <div class="card">
@@ -530,34 +530,33 @@ footer p{max-width:100ch;margin:0 0 4px}
 <section id="view-referensi" class="view" hidden>
   <div class="page refs">
     <h2>Referensi</h2>
-    <p class="lead">Sumber yang dipakai untuk prinsip UV-Vis, penetapan kadar tiamin, spesifikasi Shimadzu UV-1800, dan validasi. Periksa kembali edisi, tahun, dan halaman sebelum mencantumkannya di laporan.</p>
+    <p class="lead">Sumber yang dipakai untuk prinsip UV-Vis, penetapan kadar tiamin, spesifikasi Shimadzu UV-1800, dan validasi. <em>Hanya sebagai referensi! cek kembali sumber rujukan sebelum kerja dan saat membuat laporan</em></p>
 
     <div class="card">
       <h3>Prinsip spektrofotometri UV-Vis</h3>
       <ol>
-        <li>Skoog, D.A., Holler, F.J., Crouch, S.R. (2017). <em>Principles of Instrumental Analysis</em>, 7th ed. Boston: Cengage Learning. Bab tentang pengantar spektrometri absorpsi, instrumen untuk spektrometri optik, dan aplikasi spektrometri molekuler UV-Vis.</li>
-        <li>Harris, D.C. (2016). <em>Quantitative Chemical Analysis</em>, 9th ed. New York: W.H. Freeman. Bab tentang spektrofotometri dan hukum Lambert-Beer.</li>
-        <li>Gandjar, I.G., Rohman, A. (2007). <em>Kimia Farmasi Analisis</em>. Yogyakarta: Pustaka Pelajar. Bab spektrofotometri ultraviolet-visibel.</li>
-        <li>Watson, D.G. (2012). <em>Pharmaceutical Analysis: A Textbook for Pharmacy Students and Pharmaceutical Chemists</em>, 3rd ed. Edinburgh: Churchill Livingstone, Elsevier.</li>
+        <li>SKOOG, D.A., F.J. HOLLER, & S.R. CROUCH 2017. <em>Principles of Instrumental Analysis</em>, Edisi ke-7. Cengage Learning. Boston. Bab tentang pengantar spektrometri absorpsi, instrumen untuk spektrometri optik, dan aplikasi spektrometri molekuler UV-Vis.</li>
+        <li>HARRIS, D.C. 2016. <em>Quantitative Chemical Analysis</em>, Edisi ke-9. W.H. Freeman. New York. Bab tentang spektrofotometri dan hukum Lambert-Beer.</li>
+        <li>GANDJAR, I.G. & A. ROHMAN. 2007. <em>Kimia Farmasi Analisis</em>. Pustaka Pelajar. Yogyakarta. Bab spektrofotometri ultraviolet-visibel.</li>
+        <li>WATSON, D.G. 2012. <em>Pharmaceutical Analysis: A Textbook for Pharmacy Students and Pharmaceutical Chemists</em>, Edisi ke-3. Churchill Livingstone, Elsevier. Edinburgh</li>
       </ol>
     </div>
 
     <div class="card">
       <h3>Penetapan kadar tiamin</h3>
       <ol>
-        <li>Kementerian Kesehatan RI (2020). <em>Farmakope Indonesia</em>, Edisi VI. Jakarta: Kemenkes RI. Monografi tiamin hidroklorida dan bab umum spektrofotometri ultraviolet dan cahaya tampak.</li>
-        <li>Moffat, A.C., Osselton, M.D., Widdop, B. (eds.) (2011). <em>Clarke's Analysis of Drugs and Poisons</em>, 4th ed. London: Pharmaceutical Press. Monografi tiamin (data serapan UV).</li>
-        <li><em>Determination of Thiamine Hydrochloride and Pyridoxine Hydrochloride on Rice with Washing, Milling and Pounding by Spectrometric Methods</em>. Jurnal terbitan UIN Maulana Malik Ibrahim Malang, mengukur tiamin HCl secara spektrofotometri pada 246 nm. <a href="https://ejournal.uin-malang.ac.id/index.php/jip/article/view/6136/0" target="_blank" rel="noopener">ejournal.uin-malang.ac.id</a></li>
-        <li><em>Desarrollo y validación de métodos para el control de calidad de tabletas de clorhidrato de tiamina</em> (metode spektrofotometri diferensial tiokrom 369 nm). <em>Afinidad</em> LXXI (568), Oktober sampai Desember 2014. <a href="https://raco.cat/index.php/afinidad/article/download/287694/375799/397282" target="_blank" rel="noopener">raco.cat</a></li>
-        <li><em>Colorimetric Assay of Thiamine Hydrochloride in Pharmaceutical Preparations</em>. <em>Baghdad Science Journal</em>. <a href="https://bsj.uobaghdad.edu.iq/index.php/BSJ/article/download/4505/3041/15109" target="_blank" rel="noopener">bsj.uobaghdad.edu.iq</a></li>
-        <li><em>Design of Experimental Approach Biosensor for the Development and Validation of UV Spectrophotometry Method for Determination of Thiamine in Biological Samples and Tablet Formulation</em> (preprint, belum ditelaah sejawat; derivatisasi PDAB 425 nm). Preprints.org, 2021. <a href="https://www.preprints.org/manuscript/202106.0379" target="_blank" rel="noopener">preprints.org</a></li>
+        <li>KEMENTERIAN KESEHATAN RI. 2020. <em>Farmakope Indonesia</em>, Edisi VI. Jakarta: Kemenkes RI. Monografi tiamin hidroklorida dan bab umum spektrofotometri ultraviolet dan cahaya tampak.</li>
+        <li>MOFFAT, A.C., M. D. OSSETON, B. WIDDOP, <em>et al</em>. 2011. <em>Clarke's Analysis of Drugs and Poisons</em>, 4th ed. London: Pharmaceutical Press. Monografi tiamin (data serapan UV).</li>
+        <li>YAZID E. A., D. P. ATI, & A. MAHARDIKA. <em>Determination of Thiamine Hydrochloride and Pyridoxine Hydrochloride on Rice with Washing, Milling and Pounding by Spectrometric Methods</em>. Jurnal terbitan UIN Maulana Malik Ibrahim Malang, mengukur tiamin HCl secara spektrofotometri pada 246 nm. <a href="https://doi.org/10.18860/jip.v3i2.6136" target="_blank" rel="noopener">doi.org/10.18860</a></li>
+        <li>AHMAD, N. R. & F. K. OMAR. 2019. <em>Colorimetric Assay of Thiamine Hydrochloride in Pharmaceutical Preparations</em>. <em>Baghdad Science Journal</em>. <a href="https://doi.org/10.21123/bsj.2019.16.4.0898" target="_blank" rel="noopener">doi.org/10.21123</a></li>
+        <li>SHARMA, H., H. P. SAPKOTA, S. ARYAL, <em>et al</em>. 2021. <em>Design of Experimental Approach Biosensor for the Development and Validation of UV Spectrophotometry Method for Determination of Thiamine in Biological Samples and Tablet Formulation</em> (preprint, belum ditelaah sejawat; derivatisasi PDAB 425 nm). Preprints.org, 2021. <a href="https://www.preprints.org/manuscript/202106.0379" target="_blank" rel="noopener">preprints.org</a></li>
       </ol>
     </div>
 
     <div class="card">
       <h3>Shimadzu UV-1800 dan UVProbe</h3>
       <ol>
-        <li>Shimadzu Corporation. <em>UV-1800 UV-VIS Spectrophotometer: Instruction Manual</em> dan <em>UVProbe Operation Guide</em>. Dokumen resmi yang menyertai alat atau dapat diunduh dari situs Shimadzu. Gunakan sebagai rujukan utama prosedur operasi.</li>
+        <li>SHIMADZU CORPORATION. <em>UV-1800 UV-VIS Spectrophotometer: Instruction Manual</em> dan <em>UVProbe Operation Guide</em>. Dokumen resmi yang menyertai alat atau dapat diunduh dari situs Shimadzu. Gunakan sebagai rujukan utama prosedur operasi.</li>
         <li>Shimadzu UV-1800 UV-Vis Spectrophotometer. UC Santa Barbara, California NanoSystems Institute (daftar mode pengukuran, rentang panjang gelombang, tinggi pusat sel 15 mm). <a href="https://cnsi.ucsb.edu/facilities/equipment/shimadzu-uv-1800-uv-vis-spectrophotometer" target="_blank" rel="noopener">cnsi.ucsb.edu</a></li>
         <li>AU Biomaterials Design Lab: Equipment/UV1800 Shimadzu. OpenWetWare (spesifikasi spektral dan fotometrik). <a href="https://openwetware.org/wiki/AU_Biomaterials_Design_Lab:Equipment/UV1800_Shimadzu" target="_blank" rel="noopener">openwetware.org</a></li>
         <li>Shimadzu Scientific Instruments. Deskripsi produk UV-1800 (berkas ganda, monokromator Czerny-Turner, mandiri atau dikendalikan PC), dimuat di direktori GlobalSpec. <a href="https://www.globalspec.com/industrial-directory/uv_spectrophotometer" target="_blank" rel="noopener">globalspec.com</a></li>
@@ -567,9 +566,9 @@ footer p{max-width:100ch;margin:0 0 4px}
     <div class="card">
       <h3>Validasi metode analisis</h3>
       <ol>
-        <li>ICH (2005). <em>Validation of Analytical Procedures: Text and Methodology Q2(R1)</em>. International Council for Harmonisation. Pembaruan: ICH Q2(R2), 2023.</li>
-        <li>Harmita (2004). Petunjuk Pelaksanaan Validasi Metode dan Cara Perhitungannya. <em>Majalah Ilmu Kefarmasian</em>, 1(3), 117 sampai 135.</li>
-        <li>Riyanto (2014). <em>Validasi dan Verifikasi Metode Uji: Sesuai dengan ISO/IEC 17025 Laboratorium Pengujian dan Kalibrasi</em>. Yogyakarta: Deepublish.</li>
+        <li>ICH. 2005. <em>Validation of Analytical Procedures: Text and Methodology Q2(R1)</em>. International Council for Harmonisation. Pembaruan: ICH Q2(R2), 2023.</li>
+        <li>HARMITA. 2004. Petunjuk Pelaksanaan Validasi Metode dan Cara Perhitungannya. <em>Majalah Ilmu Kefarmasian</em>. 1(3):117-135.</li>
+        <li>RIYANTO. 2014. <em>Validasi dan Verifikasi Metode Uji: Sesuai dengan ISO/IEC 17025 Laboratorium Pengujian dan Kalibrasi</em>. Deepublish. Yogyakarta.</li>
       </ol>
     </div>
 
